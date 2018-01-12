@@ -8,17 +8,27 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/scripting/reader.git"
-		},
+	},
 	"files": [
 		"davereader.js"
-		],
-	"dependencies" : {
+	],
+	"dependencies": {
 		"daveutils": "*",
-		"request": "*",
-		"mime": "*",
+		"feedparser": "*",
 		"md5": "*",
+		"mime": "*",
 		"nodejs-websocket": "*",
 		"opmlparser": "*",
-		"feedparser": "*"
-		} 
+		"request": "*"
+	},
+	"devDependencies": {
+		"babel-plugin-rewire": "^1.1.0",
+		"jest": "^22.0.6"
+	},
+	"scripts": {
+		"test": "jest"
+	},
+	"jest": {
+		"verbose": true
 	}
+}

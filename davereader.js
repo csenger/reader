@@ -2094,9 +2094,7 @@ function myConsoleLog (s) { //3/28/17 by DW
 	function runUserScript (s, dataforscripts, scriptName) {
 		try {
 			if (dataforscripts !== undefined) {
-				with (dataforscripts) {
-					eval (s);
-					}
+				eval ("with (" + JSON.stringify(dataforscripts) + ") { " + s + " }");
 				}
 			else {
 				eval (s);
