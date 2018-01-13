@@ -1,8 +1,24 @@
-
 {
-  "extends": "airbnb-base",
-  "rules": {
-           "indent": ["error", "tab"],
-           "no-tabs": 0
-           }
+	"env": {
+		"node": true,
+		"jest": true
+	},
+	"extends": "airbnb-base",
+	"rules": {
+		"indent": ["error", "tab"],
+		"no-tabs": 0,
+		"no-underscore-dangle": [
+			2,
+			{
+				"allow": [
+					"__GetDependency__",
+					"__Rewire__",
+					"__ResetDependency__",
+					"__get__",
+					"__set__",
+					"__RewireAPI__"
+				]
+			}
+		]
+	}
 }
