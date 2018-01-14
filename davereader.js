@@ -1,5 +1,3 @@
-const myProductName = 'River5'; myVersion = '0.5.22';
-
 /*  The MIT License (MIT)
 	Copyright (c) 2014-2016 Dave Winer
 
@@ -21,6 +19,12 @@ const myProductName = 'River5'; myVersion = '0.5.22';
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 	*/
+
+const packageData = require('./package.json');
+
+const myProductName = packageData.name;
+const myVersion = packageData.version;
+
 
 exports.init = init;
 exports.httpRequest = handleHttpRequest; // 3/24/17 by DW
@@ -2801,4 +2805,3 @@ function init(userConfig, callback) {
 		});
 	});
 }
-
